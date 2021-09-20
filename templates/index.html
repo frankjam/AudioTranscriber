@@ -1,1 +1,22 @@
-
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> | Speech to audio </title>
+    </head>
+<body>
+    <div id='speechcontainer'>
+        <h1>Upload a file</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <br>
+            <input type="submit" value="Transcribe">
+        </form>
+        {%if transcript != "" %}
+        <div id='transccontainer'>
+            <h1>Transcript</h1>
+            <p>{{transcript}}</p>
+        </div>
+        {%endif %}
+    </div>
+</body>
+</html>
